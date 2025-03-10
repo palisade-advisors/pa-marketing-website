@@ -1,12 +1,12 @@
-import { Link } from 'gatsby';
-import { externalLinks, navigation } from '../../constants';
+import { Link } from "gatsby";
+import { externalLinks, navigation } from "../../constants";
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 interface NavbarDesktopProps {
-  path: string
+  path: string;
 }
 
 export default function NavbarDesktop({ path }: NavbarDesktopProps) {
@@ -16,11 +16,11 @@ export default function NavbarDesktop({ path }: NavbarDesktopProps) {
         <div className="relative flex h-28 items-center justify-between">
           <div className="flex flex-1 items-stretch justify-between">
             <div className="flex flex-shrink-0 items-center">
-              <Link to="/" className='mr-4'>
+              <Link to="/" className="mr-4">
                 <img
                   className="h-16 w-auto"
-                  src="/img/ttxg.svg"
-                  alt="Theta Tau Chi Gamma logo"
+                  src="CHANGEME"
+                  alt="Palisade Advisors Logo"
                 />
               </Link>
               <div className="block ml-6">
@@ -30,13 +30,11 @@ export default function NavbarDesktop({ path }: NavbarDesktopProps) {
                     to={item.href}
                     className={classNames(
                       path === item.href
-                        ? 'text-dark-red '
-                        : 'hover:text-dark-red ',
-                      'rounded-md px-3 py-2 text-lg font-medium transition-all duration-100 mr-2'
+                        ? "text-dark-red "
+                        : "hover:text-dark-red ",
+                      "rounded-md px-3 py-2 text-lg font-medium transition-all duration-100 mr-2"
                     )}
-                    aria-current={
-                      path === item.href ? 'page' : undefined
-                    }
+                    aria-current={path === item.href ? "page" : undefined}
                   >
                     {item.name}
                   </Link>
@@ -49,7 +47,7 @@ export default function NavbarDesktop({ path }: NavbarDesktopProps) {
                   <a
                     key={item.name}
                     href={item.href}
-                    className='rounded-md px-3 py-2 text-lg font-medium transition-all duration-100 inline-flex items-center hover:text-dark-red'
+                    className="rounded-md px-3 py-2 text-lg font-medium transition-all duration-100 inline-flex items-center hover:text-dark-red"
                   >
                     <item.icon size={24} stroke={1.5} className="mr-2" />
                     {item.name}

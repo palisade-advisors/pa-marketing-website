@@ -1,11 +1,7 @@
 import { IconShoppingBag, IconLogin2 } from "@tabler/icons-react";
 
-export const navigation = [
-  { name: 'About', href: '/about' },
-  { name: 'Rush', href: '/rush' },
-];
+// links that navigate within the website
+export const navigation = [{ name: "About", href: "/about" }];
 
-export const externalLinks = [
-  { name: 'Store', href: 'https://chigammastore.square.site/', icon: IconShoppingBag },
-  { name: 'Member Portal', href: 'https://cmt.thetatau.org', icon: IconLogin2 },
-]
+// links that navigate outside the website
+export const externalLinks = [] as any[];

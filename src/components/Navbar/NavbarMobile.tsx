@@ -1,14 +1,14 @@
-import { Disclosure } from '@headlessui/react';
-import { IconMenu2, IconX } from '@tabler/icons-react';
-import { Link } from 'gatsby';
-import { externalLinks, navigation } from '../../constants';
+import { Disclosure } from "@headlessui/react";
+import { IconMenu2, IconX } from "@tabler/icons-react";
+import { Link } from "gatsby";
+import { externalLinks, navigation } from "../../constants";
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 interface NavbarMobileProps {
-  path: string
+  path: string;
 }
 
 export default function NavbarMobile({ path }: NavbarMobileProps) {
@@ -20,11 +20,11 @@ export default function NavbarMobile({ path }: NavbarMobileProps) {
             <div className="relative flex h-28 items-center justify-between">
               <div className="flex flex-1 items-center justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <Link to="/" className='mr-4'>
+                  <Link to="/" className="mr-4">
                     <img
                       className="h-16 w-auto"
-                      src="/img/ttxg.svg"
-                      alt="Theta Tau Chi Gamma logo"
+                      src="CHANGEME"
+                      alt="Palisade Advisors Logo"
                     />
                   </Link>
                 </div>
@@ -53,11 +53,11 @@ export default function NavbarMobile({ path }: NavbarMobileProps) {
                   href={item.href}
                   className={classNames(
                     item.href === path
-                      ? 'bg-dark-red text-white'
-                      : 'text-gray-600 hover:bg-darker-red hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                      ? "bg-dark-red text-white"
+                      : "text-gray-600 hover:bg-darker-red hover:text-white",
+                    "block rounded-md px-3 py-2 text-base font-medium"
                   )}
-                  aria-current={item.href === path ? 'page' : undefined}
+                  aria-current={item.href === path ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
@@ -67,7 +67,7 @@ export default function NavbarMobile({ path }: NavbarMobileProps) {
                   key={item.name}
                   as="a"
                   href={item.href}
-                  className='text-gray-600 hover:bg-darker-red hover:text-white block rounded-md px-3 py-2 text-base font-medium'
+                  className="text-gray-600 hover:bg-darker-red hover:text-white block rounded-md px-3 py-2 text-base font-medium"
                 >
                   {item.name}
                 </Disclosure.Button>
