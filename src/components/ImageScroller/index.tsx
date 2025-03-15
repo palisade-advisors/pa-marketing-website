@@ -3,18 +3,29 @@ import { useResponsive } from "../../hooks/use-responsive";
 import "./styles.css";
 
 interface ImageScrollerProps {
-  imageSrcs: [string, string, string];
+  imageSrcs: string[];
   direction: "left" | "right";
   delay?: number;
 }
 
-export default function ImageScroller({ imageSrcs, direction, delay }: ImageScrollerProps) {
+export default function ImageScroller({
+  imageSrcs,
+  direction,
+  delay,
+}: ImageScrollerProps) {
   const { isMobile } = useResponsive();
   return (
-    <Marquee direction={direction} autoFill={true} speed={20} gradient={true} delay={delay} gradientWidth={ isMobile ? '50px' : '200px'}>
+    <Marquee
+      direction={direction}
+      autoFill={true}
+      speed={25}
+      gradient={true}
+      delay={delay}
+      gradientWidth={isMobile ? "50px" : "200px"}
+    >
       {imageSrcs.map((src, i) => (
-        <img key={i} src={src} className="w-80 aspect-video object-cover mx-3" />
+        <img key={i} src={src} className="w-48 object-contain mx-12" />
       ))}
     </Marquee>
-  )
+  );
 }

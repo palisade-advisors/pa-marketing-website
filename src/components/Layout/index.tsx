@@ -11,7 +11,7 @@ type LayoutProps = Omit<PageProps, "children"> & {
 // on every. single. page. change. This is not supposed to happen but oh well
 export default function Layout({ children, ...rest }: LayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-pa-cream">
       <Navbar />
       <main className="relative flex flex-grow items-stretch">{children}</main>
       {/* TODO: footer */}

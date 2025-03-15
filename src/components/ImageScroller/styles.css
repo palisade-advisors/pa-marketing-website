@@ -1,4 +1,4 @@
 /* I didn't have to specify this before, why do I now? */
 .rfm-overlay::before, .rfm-overlay::after {
-  background: linear-gradient(to right, var(--gradient-color), transparent) !important;
+  background: linear-gradient(to right, rgb(103, 97, 40), transparent) !important;
 }
