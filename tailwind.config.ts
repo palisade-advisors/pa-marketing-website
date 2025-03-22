@@ -1,7 +1,7 @@
 import { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 
-const config: Config = <const>{
+const config = <const>{
   content: [
     `./src/pages/**/*.{js,jsx,ts,tsx}`,
     `./src/components/**/*.{js,jsx,ts,tsx}`,

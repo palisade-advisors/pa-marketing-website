@@ -14,7 +14,7 @@ export default function AboutCard({
   imageUrl,
 }: AboutCardProps) {
   return (
-    <div className="flex flex-col items-start justify-center gap-8 border border-pa-primary border-opacity-20 p-6 rounded-lg w-96 bg-white bg-opacity-40">
+    <div className="flex flex-col items-start justify-center gap-8 border border-pa-primary border-opacity-20 p-6 sm:w-96 bg-white bg-opacity-40">
       <div className="flex gap-4 items-center">
         <img src={imageUrl} className="rounded-full w-24" />
         <div className="flex flex-col items-start justify-center gap-2">

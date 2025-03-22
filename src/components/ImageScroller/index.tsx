@@ -24,7 +24,11 @@ export default function ImageScroller({
       gradientWidth={isMobile ? "50px" : "200px"}
     >
       {imageSrcs.map((src, i) => (
-        <img key={i} src={src} className="w-48 object-contain mx-12" />
+        <img
+          key={i}
+          src={src}
+          className="w-48 object-contain mx-12 grayscale opacity-40"
+        />
       ))}
     </Marquee>
   );

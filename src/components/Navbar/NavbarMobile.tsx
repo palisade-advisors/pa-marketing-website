@@ -13,7 +13,7 @@ interface NavbarMobileProps {
 
 export default function NavbarMobile({ path }: NavbarMobileProps) {
   return (
-    <Disclosure as="nav" className="bg-gray-50">
+    <Disclosure as="nav" className="bg-pa-cream">
       {({ open }) => (
         <>
           <div className="mx-auto px-2">
@@ -23,7 +23,7 @@ export default function NavbarMobile({ path }: NavbarMobileProps) {
                   <Link to="/" className="mr-4">
                     <img
                       className="h-16 w-auto"
-                      src="CHANGEME"
+                      src="/img/PA_black.png"
                       alt="Palisade Advisors Logo"
                     />
                   </Link>
@@ -31,7 +31,7 @@ export default function NavbarMobile({ path }: NavbarMobileProps) {
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-dark-red hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-pa-primary hover:bg-pa-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pa-primary">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -53,21 +53,11 @@ export default function NavbarMobile({ path }: NavbarMobileProps) {
                   href={item.href}
                   className={classNames(
                     item.href === path
-                      ? "bg-dark-red text-white"
-                      : "text-gray-600 hover:bg-darker-red hover:text-white",
+                      ? "bg-pa-red text-white"
+                      : "text-gray-600 hover:bg-pa-red hover:text-white",
                     "block rounded-md px-3 py-2 text-base font-medium"
                   )}
                   aria-current={item.href === path ? "page" : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
-              ))}
-              {externalLinks.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  className="text-gray-600 hover:bg-darker-red hover:text-white block rounded-md px-3 py-2 text-base font-medium"
                 >
                   {item.name}
                 </Disclosure.Button>

@@ -7,7 +7,7 @@ env.config();
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `cw-gatsby`,
-    // siteUrl: `https://www.tennesseethetatau.com`,
+    siteUrl: "https://www.palisadeadvisors.net",
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -18,13 +18,13 @@ const config: GatsbyConfig = {
     "gatsby-plugin-typescript",
     "gatsby-plugin-provide-react",
     "gatsby-plugin-image",
-    // {
-    //   resolve: "gatsby-source-contentful",
-    //   options: {
-    //     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-    //     spaceId: process.env.CONTENTFUL_SPACE_ID,
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+      },
+    },
   ],
 };
 

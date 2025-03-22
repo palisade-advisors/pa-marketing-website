@@ -1,38 +1,42 @@
-import { IconArrowRight } from "@tabler/icons-react";
 import headFactory from "../utils/head-factory";
 import ImageScroller from "../components/ImageScroller";
+import CallToAction from "../components/CallToAction";
+import useHomeData from "../hooks/use-home-data";
 
 export default function Home() {
+  const homeData = useHomeData();
+  console.log(homeData);
+
   return (
-    <section className="flex flex-col w-full h-[calc(100vh-96px)]">
-      <div className="flex px-12 flex-1">
-        <div className="flex flex-col items-start justify-center gap-8 h-full w-1/2 xl:w-1/3">
-          <h1 className="text-5xl font-bold font-serif">
-            Placeholder hero title: something awesome
-          </h1>
-          <p className="text-lg">
-            Some text describing why you should go with us. How are we
-            different? Find out by booking a meeting or viewing our services. We
-            should also explain other stuff here. It should be about this long.
-          </p>
-          <a className="group font-medium text-lg hover:text-pa-orange transition-all duration-300 ease-out flex items-center cursor-pointer">
-            See something
-            <IconArrowRight className="ml-2 text-pa-orange group-hover:translate-x-2 transition-all ease-out duration-300" />
-          </a>
+    <section className="flex flex-col w-full min-h-[calc(100vh-96px)] items-center gap-12">
+      <div className="flex flex-1 px-4 md:px-12">
+        <div className="flex flex-col items-start justify-center gap-8 h-full w-full md:w-1/2 xl:w-1/3">
+          <h1 className="text-5xl font-bold font-serif">{homeData.title}</h1>
+          <p className="text-lg">{homeData.shortDescription}</p>
+          <CallToAction
+            text={homeData.callToActionText}
+            href={homeData.callToActionLink}
+          />
+        </div>
+        <div className="flex flex-1 w-full items-center md:w-1/2 xl:w-2/3 h-full">
+          {homeData.heroImage && (
+            <img
+              src={homeData.heroImage}
+              alt="Hero"
+              className="object-cover w-full h-[50vh]"
+            />
+          )}
         </div>
       </div>
-      <div className="h-32 bg-pa-green w-full flex items-center">
-        <ImageScroller
-          imageSrcs={[
-            "img/meta-logo.png",
-            "img/github-logo.png",
-            "img/google-logo.webp",
-            "img/netflix-logo.png",
-          ]}
-          direction="left"
-          delay={50}
-        />
-      </div>
+      {homeData.companyLogos && (
+        <div className="h-32 bg-pa-green w-full flex items-center">
+          <ImageScroller
+            imageSrcs={homeData.companyLogos}
+            direction="left"
+            delay={50}
+          />
+        </div>
+      )}
     </section>
   );
 }
