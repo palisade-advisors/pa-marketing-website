@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcw_gatsby=self.webpackChunkcw_gatsby||[]).push([[52],{2528:function(t,n,e){e.r(n),e.d(n,{default:function(){return u}});var r=e(9366);function u(){const t=(0,r.K2)("4255276745");return{title:t.contentfulOurStoryContent.title,description:t.contentfulOurStoryContent.description.description,image:t.contentfulOurStoryContent.image.publicUrl}}}}]);
+//# sourceMappingURL=component---src-pages-about-use-story-content-ts-25364fed6ac374c280d6.js.map

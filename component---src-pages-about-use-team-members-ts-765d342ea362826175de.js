@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcw_gatsby=self.webpackChunkcw_gatsby||[]).push([[335],{4040:function(e,n,l){l.r(n),l.d(n,{default:function(){return a}});var t=l(9366);function a(){return(0,t.K2)("3901332590").allContentfulTeamMember.nodes.map((e=>({name:e.fullName,title:e.title,bio:e.bio.bio,imageUrl:e.headshot.publicUrl,email:e.email,linkedIn:e.linkedIn})))}}}]);
+//# sourceMappingURL=component---src-pages-about-use-team-members-ts-765d342ea362826175de.js.map
