@@ -20,7 +20,7 @@ export default function useServiceData() {
             description
           }
           image {
-            publicUrl
+            url
           }
           name
         }
@@ -36,7 +36,7 @@ export default function useServiceData() {
   return nodes.map((node: any) => ({
     name: node.name,
     description: node.description.description,
-    image: node.image?.publicUrl,
+    image: node.image?.url,
     callToActionText: node.callToActionText,
     callToActionLink: node.callToActionLink,
   })) as ServiceData[];

@@ -13,14 +13,14 @@ export default function useGeneralData() {
         callToActionLink
         callToActionText
         headerLogo {
-          publicUrl
+          url
         }
       }
     }
   `);
 
   return {
-    logo: data.contentfulGeneral.headerLogo.publicUrl,
+    logo: data.contentfulGeneral.headerLogo.url,
     ctaText: data.contentfulGeneral.callToActionText,
     ctaLink: data.contentfulGeneral.callToActionLink,
   } as GeneralData;

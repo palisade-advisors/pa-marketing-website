@@ -15,7 +15,7 @@ export default function useStoryContent(): StoryContent {
           description
         }
         image {
-          publicUrl
+          url
         }
       }
     }
@@ -23,6 +23,6 @@ export default function useStoryContent(): StoryContent {
   return {
     title: data.contentfulOurStoryContent.title,
     description: data.contentfulOurStoryContent.description.description,
-    image: data.contentfulOurStoryContent.image.publicUrl,
+    image: data.contentfulOurStoryContent.image.url,
   };
 }

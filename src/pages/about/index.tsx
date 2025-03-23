@@ -1,7 +1,7 @@
 import AboutCard from "../../components/AboutCard";
 import headFactory from "../../utils/head-factory";
-import useStoryContent from "./use-story-content";
-import useTeamMembers from "./use-team-members";
+import useStoryContent from "../../hooks/use-story-content";
+import useTeamMembers from "../../hooks/use-team-members";
 
 export default function AboutPage() {
   const storyContent = useStoryContent();

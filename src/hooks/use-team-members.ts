@@ -21,7 +21,7 @@ export default function useTeamMembers(): TeamMember[] {
           email
           fullName
           headshot {
-            publicUrl
+            url
           }
           linkedIn
           title
@@ -33,7 +33,7 @@ export default function useTeamMembers(): TeamMember[] {
     name: node.fullName,
     title: node.title,
     bio: node.bio.bio,
-    imageUrl: node.headshot.publicUrl,
+    imageUrl: node.headshot.url,
     email: node.email,
     linkedIn: node.linkedIn,
   }));

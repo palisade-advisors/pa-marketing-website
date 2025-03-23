@@ -1,5 +1,5 @@
 import ServiceItem from "../../components/ServiceItem";
-import useServiceData from "./use-service-data";
+import useServiceData from "../../hooks/use-service-data";
 
 export default function ServicesPage() {
   const services = useServiceData();
