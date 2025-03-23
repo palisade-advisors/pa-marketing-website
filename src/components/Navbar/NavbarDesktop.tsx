@@ -1,5 +1,6 @@
 import { Link } from "gatsby";
 import { externalLinks, navigation } from "../../constants";
+import useGeneralData from "../../hooks/use-general-data";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -10,6 +11,7 @@ interface NavbarDesktopProps {
 }
 
 export default function NavbarDesktop({ path }: NavbarDesktopProps) {
+  const { logo, ctaLink, ctaText } = useGeneralData();
   return (
     <nav>
       <div className="mx-auto px-6">
@@ -18,7 +20,7 @@ export default function NavbarDesktop({ path }: NavbarDesktopProps) {
             <Link to="/" className="mr-4">
               <img
                 className="h-14 w-auto"
-                src="/img/PA_black.png"
+                src={logo}
                 alt="Palisade Advisors Logo"
               />
             </Link>
@@ -41,9 +43,9 @@ export default function NavbarDesktop({ path }: NavbarDesktopProps) {
                 ))}
                 <a
                   className="bg-pa-orange hover:bg-pa-red transition-colors duration-300 ease-out text-white px-4 py-2 ml-4"
-                  href="/contact"
+                  href={ctaLink}
                 >
-                  Schedule a meeting
+                  {ctaText}
                 </a>
               </div>
             </div>

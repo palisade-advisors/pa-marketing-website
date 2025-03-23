@@ -18,10 +18,10 @@ export default function useHomeData(): HomeData {
         callToActionText
         callToActionLink
         heroImage {
-          url
+          publicUrl
         }
         companyLogos {
-          url
+          publicUrl
         }
       }
     }
@@ -34,10 +34,10 @@ export default function useHomeData(): HomeData {
     shortDescription: data.contentfulHomePageContent.shortDescription,
     callToActionText: data.contentfulHomePageContent.callToActionText,
     callToActionLink: data.contentfulHomePageContent.callToActionLink,
-    heroImage: data.contentfulHomePageContent.heroImage?.url || null,
+    heroImage: data.contentfulHomePageContent.heroImage?.publicUrl || null,
     companyLogos:
       data.contentfulHomePageContent.companyLogos?.map(
-        (logo: { url: string }) => logo.url
+        (logo: { publicUrl: string }) => logo.publicUrl
       ) || null,
   };
 }

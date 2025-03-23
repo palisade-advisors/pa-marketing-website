@@ -1,10 +1,12 @@
 import CallToAction from "./CallToAction";
 
 interface ServiceItemProps {
-  title: string;
+  name: string;
   description: string;
-  imageUrl?: string;
+  image?: string;
   align?: "left" | "right";
+  ctaText?: string | null;
+  ctaLink?: string | null;
 }
 
 function classNames(...classes: string[]) {
@@ -12,19 +14,21 @@ function classNames(...classes: string[]) {
 }
 
 export default function ServiceItem({
-  title,
+  name,
   description,
-  imageUrl,
+  image,
   align = "left",
+  ctaText,
+  ctaLink,
 }: ServiceItemProps) {
-  if (!imageUrl) {
+  if (!image) {
     return (
       <div className="flex flex-col w-full md:w-1/2 gap-4">
         <h1 className="text-4xl font-serif font-semibold text-pa-primary">
-          {title}
+          {name}
         </h1>
         <p>{description}</p>
-        <CallToAction text="Schedule a call to learn more" href="test" />
+        {ctaText && ctaLink && <CallToAction text={ctaText} href={ctaLink} />}
       </div>
     );
   }
@@ -38,13 +42,15 @@ export default function ServiceItem({
     >
       <div className="flex flex-col w-full md:w-1/2 gap-4">
         <h1 className="text-4xl font-serif font-semibold text-pa-primary">
-          {title}
+          {name}
         </h1>
         <p>{description}</p>
-        <CallToAction text="Schedule a call to learn more" href="test" />
+        {ctaText && ctaLink && <CallToAction text={ctaText} href={ctaLink} />}
       </div>
       <div className="flex flex-col w-full md:w-1/2 h-[50vh] bg-pa-green">
-        <p>image here</p>
+        {image && (
+          <img src={image} alt={name} className="object-cover h-full w-full" />
+        )}
       </div>
     </div>
   );
