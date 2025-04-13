@@ -23,7 +23,7 @@ export default function Home() {
             <img
               src={homeData.heroImage}
               alt="Hero"
-              className="object-cover w-full h-[50vh]"
+              className="object-contain w-full h-[50vh]"
             />
           )}
         </div>

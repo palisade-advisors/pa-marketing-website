@@ -47,9 +47,13 @@ export default function ServiceItem({
         <p>{description}</p>
         {ctaText && ctaLink && <CallToAction text={ctaText} href={ctaLink} />}
       </div>
-      <div className="flex flex-col w-full md:w-1/2 h-[50vh] bg-pa-green">
+      <div className="flex flex-col w-full md:w-1/2 h-[50vh]">
         {image && (
-          <img src={image} alt={name} className="object-cover h-full w-full" />
+          <img
+            src={image}
+            alt={name}
+            className="object-contain h-full w-full"
+          />
         )}
       </div>
     </div>

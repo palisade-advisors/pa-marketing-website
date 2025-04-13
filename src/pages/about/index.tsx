@@ -20,7 +20,7 @@ export default function AboutPage() {
           <img
             src={storyContent.image}
             alt="About"
-            className="object-cover w-full h-full"
+            className="object-contain w-full h-full"
           />
         </div>
       </div>
