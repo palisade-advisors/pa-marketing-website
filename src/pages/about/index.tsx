@@ -14,7 +14,9 @@ export default function AboutPage() {
           <h1 className="text-4xl font-serif font-semibold text-pa-primary">
             {storyContent.title}
           </h1>
-          <p>{storyContent.description}</p>
+          <p className="break-words whitespace-pre-wrap">
+            {storyContent.description}
+          </p>
         </div>
         <div className="flex flex-col w-full md:w-1/2 h-[50vh]">
           <img
@@ -31,9 +33,9 @@ export default function AboutPage() {
           </h1>
           <hr className="w-12 h-1.5 bg-pa-orange mx-auto mb-8" />
         </div>
-        <div className="flex gap-4 flex-wrap">
-          {teamMembers.map((member) => (
-            <AboutCard {...member} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
+          {teamMembers.map((member, idx) => (
+            <AboutCard key={member.name + idx} {...member} />
           ))}
         </div>
       </div>

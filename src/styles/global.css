@@ -6,4 +6,9 @@
   html {
     @apply text-pa-primary;
   }
+  body {
+    @apply max-w-screen-2xl mx-auto;
+
+    @apply bg-pa-cream;
+  }
 }

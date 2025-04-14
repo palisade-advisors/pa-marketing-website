@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <section className="flex flex-col w-full min-h-[calc(100vh-96px)] items-center gap-12">
-      <div className="flex flex-1 px-4 md:px-12">
+      <div className="flex flex-1 px-4 md:px-12 2xl:gap-28">
         <div className="flex flex-col items-start justify-center gap-8 h-full w-full md:w-1/2 xl:w-1/3">
           <h1 className="text-5xl font-bold font-serif">{homeData.title}</h1>
           <p className="text-lg">{homeData.shortDescription}</p>
@@ -18,7 +18,7 @@ export default function Home() {
             href={homeData.callToActionLink}
           />
         </div>
-        <div className="flex flex-1 w-full items-center md:w-1/2 xl:w-2/3 h-full">
+        <div className="flex flex-1 w-full items-center md:w-1/2 xl:w-1/3 h-full">
           {homeData.heroImage && (
             <img
               src={homeData.heroImage}

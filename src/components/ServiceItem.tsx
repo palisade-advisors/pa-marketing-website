@@ -44,7 +44,7 @@ export default function ServiceItem({
         <h1 className="text-4xl font-serif font-semibold text-pa-primary">
           {name}
         </h1>
-        <p>{description}</p>
+        <p className="whitespace-pre-wrap break-words">{description}</p>
         {ctaText && ctaLink && <CallToAction text={ctaText} href={ctaLink} />}
       </div>
       <div className="flex flex-col w-full md:w-1/2 h-[50vh]">
